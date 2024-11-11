@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" data-bs-theme="light">
+<html lang="en" data-bs-theme="light">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,14 +7,14 @@
         
         
         
-        <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Grapheur - WRSimulateur</title>
-        <link href="../../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../../css/fontawesome.min.css" rel="stylesheet">
-        <link href="../../css/brands.min.css" rel="stylesheet">
-        <link href="../../css/solid.min.css" rel="stylesheet">
-        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
-        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Modbus TCP-IP - WRSimulator</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
         <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
         <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
@@ -24,7 +24,7 @@
     <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href="../">WRSimulateur</a>
+                <a class="navbar-brand" href="..">WRSimulator</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -35,34 +35,34 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li class="nav-item">
-                                <a href="../" class="nav-link">Accueil</a>
+                                <a href=".." class="nav-link">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a href="../simulator/" class="nav-link">Simulateur</a>
+                                <a href="../simulator/" class="nav-link">Simulator</a>
                             </li>
                             <li class="nav-item">
-                                <a href="../library/" class="nav-link">Bibliothèque simulable</a>
+                                <a href="../library/" class="nav-link">Simulable library</a>
                             </li>
                             <li class="nav-item">
-                                <a href="../synoptic/" class="nav-link">Synoptique</a>
+                                <a href="../synoptic/" class="nav-link">Synoptic</a>
                             </li>
                             <li class="nav-item">
-                                <a href="../modbus/" class="nav-link">Modbus TCP-IP</a>
+                                <a href="./" class="nav-link active" aria-current="page">Modbus TCP-IP</a>
                             </li>
                             <li class="nav-item">
-                                <a href="../plc/" class="nav-link">Automate programmable</a>
+                                <a href="../plc/" class="nav-link">Programmable Logic Controller</a>
                             </li>
                             <li class="nav-item">
-                                <a href="../hmi/" class="nav-link">Interface Homme machine</a>
+                                <a href="../hmi/" class="nav-link">Human Machine Interface</a>
                             </li>
                             <li class="nav-item">
-                                <a href="../speed_controller/" class="nav-link">Variateur de vitesse</a>
+                                <a href="../speed_controller/" class="nav-link">Speed Controller</a>
                             </li>
                             <li class="nav-item">
-                                <a href="./" class="nav-link active" aria-current="page">Grapheur</a>
+                                <a href="../grapher/" class="nav-link">Grapher</a>
                             </li>
                             <li class="nav-item">
-                                <a href="../errors/" class="nav-link">Liste avertissements</a>
+                                <a href="../errors/" class="nav-link">Warning list</a>
                             </li>
                         </ul>
 
@@ -73,12 +73,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../speed_controller/" class="nav-link">
+                                <a rel="prev" href="../synoptic/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../errors/" class="nav-link">
+                                <a rel="next" href="../plc/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -100,8 +100,24 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#grapheur" class="nav-link">Grapheur</a>
+            <li class="nav-item" data-bs-level="1"><a href="#modbustcp-ip" class="nav-link">Modbus/Tcp-IP</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#preamble" class="nav-link">Preamble</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#modbus-function-codes-supported" class="nav-link">MODBUS function codes supported</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#modbus-mapping" class="nav-link">MODBUS mapping</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#modbus-configuration" class="nav-link">MODBUS Configuration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -109,57 +125,87 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="grapheur">Grapheur</h1>
-<p>Ce module permet de dessiner un chronogramme (jusqu'à 16 variables) pendant la simulation :
-<img alt="" src="../media/image84.png" /></p>
+<h1 id="modbustcp-ip">Modbus/Tcp-IP</h1>
+<h2 id="preamble">Preamble</h2>
 <ul>
-<li>Il faut préalablement préparer la liste des variables à visualiser dans une zone texte éditée dans WinRelais, par exemple :</li>
+<li>The simulator integrates the MODBUS/TCP-IP fieldbus protocol, a variant of the serial MODBUS proposed by MODICON since 1979.</li>
+<li>The TCP-IP variant encapsulates the MODBUS protocol in the Ethernet protocol.</li>
+<li>This encapsulation enables manufacturers to use MODBUS on any Ethernet hardware infrastructure.</li>
+<li>MODBUS TCP-IP offers decisive advantages:<ul>
+<li>it's the most widely used Industrial Ethernet protocol in the world,</li>
+<li>its <a href="../assets/Modbus_Application_Protocol_V1_1b.pdf">specifications</a> are readily available,</li>
 </ul>
-<p>(<strong>19 - demo_Variateur_ATV31_triphasé_3C.xrs</strong>)
-<img alt="" src="../media/grapher2.png" /></p>
+</li>
+<li>it is ideally suited to the rapid exchange of small quantities of data.</li>
+</ul>
+<h2 id="modbus-function-codes-supported">MODBUS function codes supported</h2>
 <ul>
-<li>Il faut que la première ligne de la zone de texte commence par le mot clef <strong>Grapheur</strong>,</li>
-<li>cette zone texte peut-être placée librement dans le schéma,</li>
+<li>code 03 (0x03) Read Holding Registers<ul>
+<li>This function code is used to read the contents of a contiguous block of PLC memory registers. The request specifies the start register address and the number of registers. In the request, registers are addressed starting from zero. Thus, registers numbered 1 to 16 are addressed as 0 to 15.</li>
+<li>Register data in the response message is compacted as two bytes per register, with the binary content right-justified within each byte. For each register, the first byte contains the most significant bits and the second contains the least significant bits.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="../media/request3.png" /></p>
+<ul>
 <li>
-<p>une icone spécifique apparait pendant la simulation si la zone texte <strong>Grapheur</strong> est détectée,
-<img alt="" src="../media/grapher3.png" /></p>
+<p>code 16 (0x10) Write Multiple Registers</p>
+<ul>
+<li>This function code is used to write a block of contiguous registers (1 to 123 registers) to PLC memory, specifying the values to be written in the request data field. The data is compacted to two bytes per register.</li>
+<li>The normal response returns the function code, the start address and the number of registers written.
+<img alt="" src="../media/request16.png" /></li>
+</ul>
 </li>
 <li>
-<p>l'ordre des variables détermine l'ordre d'affichage du chronogramme,</p>
-</li>
-<li>la syntaxe utilisée pour définir une variable est : <strong>nom_de_l'objet.commande[.calibre]</strong></li>
+<p>code 23 (0x17) Read/Write Multiple Registers</p>
+<ul>
+<li>This function code performs a combination of read and write operations in a single MODBUS transaction. The write operation is performed before the read operation.</li>
+<li>PLC memory registers are addressed starting from zero. Thus, registers 1 to 16 are addressed in the PLC as 0 to 15.</li>
+<li>The request specifies the start address and number of PLC registers to be read, as well as the start address, number of PLC registers and data to be written. The <strong>WriteByteCount</strong> field specifies the number of bytes that follow in the data field to be written.</li>
+<li>The normal response contains the data from the group of registers that have been read. The <strong>ByteCount</strong> field specifies the number of bytes to follow in the read data field.</li>
 </ul>
+</li>
+</ul>
+<p><img alt="" src="../media/request23.png" /></p>
+<h2 id="modbus-mapping">MODBUS mapping</h2>
+<p><img alt="" src="../media/mappage_modbus.png" /></p>
+<h2 id="modbus-configuration">MODBUS Configuration</h2>
+<p><img alt="" src="../media/modbus_config.png" /></p>
 <table>
 <thead>
 <tr>
-<th>commande</th>
-<th>description</th>
-<th>exemple</th>
+<th></th>
+<th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>state</td>
-<td>état actif/non actif</td>
-<td>fdc_haut.state : état du fin de course haut</td>
+<td>ip_adress</td>
+<td>localhost/127.0.0.1/xxx.xxx.xxx.xxx</td>
+<td>IP address of PLC server</td>
 </tr>
 <tr>
-<td>speed</td>
-<td>vitesse objet moteur</td>
-<td>M1.speed : vitesse du moteur M1</td>
+<td>port</td>
+<td>502</td>
+<td>standard MODBUS port</td>
 </tr>
 <tr>
-<td>direction</td>
-<td>sens de rotation objet moteur</td>
-<td>M1.rotation : sens de rotation du moteur M1</td>
+<td>unit_ID</td>
+<td>111</td>
+<td>customer_id</td>
 </tr>
 <tr>
-<td>value.calibre</td>
-<td>valeur mesurée et calibre</td>
-<td>A1.value.10 : courant mesuré par l'ampèremètre A1 calibré 10 A</td>
+<td>exchange_table_address</td>
+<td>400</td>
+<td>pointer on exchange table</td>
 </tr>
 </tbody>
-</table></div>
+</table>
+<ul>
+<li>If the MODBUS configuration object is not set in your project, the default values used are: ip_address = local_host, port = 502, exchange_table_address = 400 and unit_ID = 111.</li>
+<li>The MODBUS configuration object is only required when a PLC is present in a folio.</li>
+</ul></div>
             </div>
         </div>
 
@@ -167,13 +213,13 @@
             <hr>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
-        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script src="../js/bootstrap.bundle.min.js"></script>
         <script>
-            var base_url = "../..",
+            var base_url = "..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../../js/base.js"></script>
-        <script src="../../search/main.js"></script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
