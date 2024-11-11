@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="fr" >
+<html class="writer-html5" lang="en" >
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Interface Homme machine - WRSimulateur</title>
+    <title>Interface Homme Machine - wrs</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Interface Homme machine";
+        var mkdocs_page_name = "Interface Homme Machine";
         var mkdocs_page_input_path = "fr\\hmi.md";
         var mkdocs_page_url = null;
       </script>
@@ -30,7 +30,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href="../" class="icon icon-home"> WRSimulateur
+          <a href="../.." class="icon icon-home"> wrs
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -40,55 +40,43 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../">Accueil</a>
+                <li class="toctree-l1"><a class="" href="../../index.md">Home</a>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../simulator/">Simulateur</a>
+                <li class="toctree-l1"><a class="" href="../../simulator.md">Simulator</a>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../library/">Bibliothèque simulable</a>
+                <li class="toctree-l1"><a class="" href="../../library.md">Simulable library</a>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../synoptic/">Synoptique</a>
+                <li class="toctree-l1"><a class="" href="../../synoptic.md">Synoptic</a>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../modbus/">Modbus TCP-IP</a>
+                <li class="toctree-l1"><a class="" href="../../modbus.md">Modbus TCP-IP</a>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../plc/">Automate programmable</a>
-                </li>
-              </ul>
-              <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="#">Interface Homme machine</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#voyant">Voyant</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#bouton-poussoir-bouton-glissiere">Bouton poussoir / Bouton glissière</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#commutateur">Commutateur</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#potentiometre">Potentiomètre</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#composition">Composition</a>
-    </li>
-    </ul>
+                <li class="toctree-l1"><a class="" href="../../plc.md">Programmable Logic Controller</a>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../speed_controller/">Variateur de vitesse</a>
+                <li class="toctree-l1"><a class="" href="../../hmi.md">Human Machine Interface</a>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../grapher/">Grapheur</a>
+                <li class="toctree-l1"><a class="" href="../../speed_controller.md">Speed Controller</a>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../errors/">Liste avertissements</a>
+                <li class="toctree-l1"><a class="" href="../../grapher.md">Grapher</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="../../errors.md">Warning list</a>
                 </li>
               </ul>
       </div>
@@ -98,14 +86,14 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../">WRSimulateur</a>
+          <a href="../..">wrs</a>
         
       </nav>
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="../" class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Interface Homme machine</li>
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Interface Homme Machine</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -115,11 +103,11 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="interface-homme-machine">Interface Homme Machine</h1>
-<p><img alt="" src="../media/hmi1.png" /></p>
+<p><img alt="" src="fr/media/hmi1.png" /></p>
 <ul>
 <li>Les composants ihm sont modifiables dans WinSymbole.</li>
 <li>On peut créer des variantes de composants ihm en ajoutant le suffixe <strong>#ma_variante</strong> après la racine du composant. Exemple :
-<img alt="" src="../media/hmi2.png" /></li>
+<img alt="" src="fr/media/hmi2.png" /></li>
 </ul>
 <h2 id="voyant">Voyant</h2>
 <table>
@@ -226,25 +214,21 @@
 <ul>
 <li>
 <p>Bibliothèque <strong>_divers_pneumatique</strong> :
-<img alt="" src="../media/hmi3.png" /></p>
+<img alt="" src="fr/media/hmi3.png" /></p>
 </li>
 <li>
 <p>Bibliothèque <strong>_capteurs</strong>
-<img alt="" src="../media/hmi4.png" /></p>
+<img alt="" src="fr/media/hmi4.png" /></p>
 </li>
 <li>
 <p>Bibliothèque <strong>_résistances</strong>
         - L'association d'un composant ihm n'est pas obligatoire pour les composants résistances
-<img alt="" src="../media/hmi5.png" /></p>
+<img alt="" src="fr/media/hmi5.png" /></p>
 </li>
 </ul>
               
             </div>
           </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../plc/" class="btn btn-neutral float-left" title="Automate programmable"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../speed_controller/" class="btn btn-neutral float-right" title="Variateur de vitesse">Next <span class="icon icon-circle-arrow-right"></span></a>
-    </div>
 
   <hr/>
 
@@ -266,10 +250,6 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../plc/" style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="../speed_controller/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

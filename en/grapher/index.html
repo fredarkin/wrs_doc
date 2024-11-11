@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Grapheur - wrs</title>
+    <title>Grapher - wrs</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Grapheur";
-        var mkdocs_page_input_path = "fr\\grapher.md";
+        var mkdocs_page_name = "Grapher";
+        var mkdocs_page_input_path = "en\\grapher.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -93,7 +93,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Grapheur</li>
+      <li class="breadcrumb-item active">Grapher</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -102,54 +102,54 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="grapheur">Grapheur</h1>
-<p>Ce module permet de dessiner un chronogramme (jusqu'à 16 variables) pendant la simulation :
-<img alt="" src="fr/media/image84.png" /></p>
+                <h1 id="grapher">Grapher</h1>
+<p>This module allows you to draw a chronogram (up to 16 variables) during simulation:
+<img alt="" src="../media/image84.png" /></p>
 <ul>
-<li>Il faut préalablement préparer la liste des variables à visualiser dans une zone texte éditée dans WinRelais, par exemple :</li>
+<li>You must first prepare the list of variables to be displayed in a text zone edited in WinRelais, for example :</li>
 </ul>
-<p>(<strong>19 - demo_Variateur_ATV31_triphasé_3C.xrs</strong>)
-<img alt="" src="fr/media/grapher2.png" /></p>
+<p>(<strong>us19 - demo_Speed_Drive_ATV31_3ph_3C</strong>)
+<img alt="" src="../media/grapher2.png" /></p>
 <ul>
-<li>Il faut que la première ligne de la zone de texte commence par le mot clef <strong>Grapheur</strong>,</li>
-<li>cette zone texte peut-être placée librement dans le schéma,</li>
+<li>The first line of the text box must begin with the keyword <strong>Grapher</strong>,</li>
+<li>this text box can be placed anywhere in the layout,</li>
 <li>
-<p>une icone spécifique apparait pendant la simulation si la zone texte <strong>Grapheur</strong> est détectée,
-<img alt="" src="fr/media/grapher3.png" /></p>
+<p>a specific icon appears during simulation if the <strong>Grapher</strong> text zone is detected,
+<img alt="" src="../media/grapher3.png" /></p>
 </li>
 <li>
-<p>l'ordre des variables détermine l'ordre d'affichage du chronogramme,</p>
+<p>variable order determines chronogram display order,</p>
 </li>
-<li>la syntaxe utilisée pour définir une variable est : <strong>nom_de_l'objet.commande[.calibre]</strong></li>
+<li>the syntax used to define a variable is : <strong>name_object.control[.caliber]</strong></li>
 </ul>
 <table>
 <thead>
 <tr>
-<th>commande</th>
+<th>control</th>
 <th>description</th>
-<th>exemple</th>
+<th>example</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>state</td>
-<td>état actif/non actif</td>
-<td>fdc_haut.state : état du fin de course haut</td>
+<td>status active/not active</td>
+<td>fdc_haut.state : status of high limit switch</td>
 </tr>
 <tr>
 <td>speed</td>
-<td>vitesse objet moteur</td>
-<td>M1.speed : vitesse du moteur M1</td>
+<td>motor object speed</td>
+<td>M1.speed : M1 motor speed</td>
 </tr>
 <tr>
 <td>direction</td>
-<td>sens de rotation objet moteur</td>
-<td>M1.rotation : sens de rotation du moteur M1</td>
+<td>sense of rotation motor object</td>
+<td>M1.rotation : direction of rotation of motor M1</td>
 </tr>
 <tr>
-<td>value.calibre</td>
-<td>valeur mesurée et calibre</td>
-<td>A1.value.10 : courant mesuré par l'ampèremètre A1 calibré 10 A</td>
+<td>value.caliber</td>
+<td>measured value and caliber</td>
+<td>A1.value.10 : current measured by ammeter A1 calibrated 10 A</td>
 </tr>
 </tbody>
 </table>
