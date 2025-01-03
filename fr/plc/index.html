@@ -731,15 +731,21 @@
 <p><img alt="" src="../media/modbus_modules.png" /></p>
 <ul>
 <li>Chaque module d'E/S intègre quatre mots d'entrée 16 bits et quatre mots de sortie 16 bits.</li>
-<li>Ces mots peuvent-être déclinés :</li>
+<li>Ces mots peuvent-être déclinés :<ul>
 <li>en entrées ou sorties analogiques,</li>
 <li>en entrées ou sorties TOR.</li>
-<li>Finalement, chaque module peut gérer :</li>
+</ul>
+</li>
+<li>Finalement, chaque module peut gérer :<ul>
 <li>jusqu'à 64 entrées TOR et 64 sorties TOR,</li>
-<li>un mix d'E/S TOR et analogiques, par exemple pour le module 0 :</li>
+<li>un mix d'E/S TOR et analogiques, par exemple pour le module 0 :<ul>
 <li>%QW0.0 -&gt; mot de 16 bits pour une sortie 'analogique'</li>
 <li>%QW0.1 -&gt; 16 bits utilisables pour 16 sorties TOR</li>
 <li>%IW0.0  -&gt; 16 bits utilisables pour 16 entrées TOR</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <p>L'exemple ci-dessous utilise <strong>EcoStruxure Basic Expert de SchneiderElectric</strong> qui permet la programmation et la simulation des automates de la famille M221.</p>
 <h2 id="exemple-ascenseur">Exemple ascenseur</h2>
