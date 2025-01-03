@@ -406,9 +406,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#topologie-des-es" class="md-nav__link">
+  <a href="#face-avant-de-lapi-virtuel" class="md-nav__link">
     <span class="md-ellipsis">
-      Topologie des E/S
+      Face avant de l'API virtuel
     </span>
   </a>
   
@@ -607,9 +607,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#topologie-des-es" class="md-nav__link">
+  <a href="#face-avant-de-lapi-virtuel" class="md-nav__link">
     <span class="md-ellipsis">
-      Topologie des E/S
+      Face avant de l'API virtuel
     </span>
   </a>
   
@@ -727,8 +727,20 @@
 </li>
 </ul>
 <p><img alt="" src="../media/unilogic.png" /></p>
-<h2 id="topologie-des-es">Topologie des E/S</h2>
+<h2 id="face-avant-de-lapi-virtuel">Face avant de l'API virtuel</h2>
 <p><img alt="" src="../media/modbus_modules.png" /></p>
+<ul>
+<li>Chaque module d'E/S intègre quatre mots d'entrée 16 bits et quatre mots de sortie 16 bits.</li>
+<li>Ces mots peuvent-être déclinés :</li>
+<li>en entrées ou sorties analogiques,</li>
+<li>en entrées ou sorties TOR.</li>
+<li>Finalement, chaque module peut gérer :</li>
+<li>jusqu'à 64 entrées TOR et 64 sorties TOR,</li>
+<li>un mix d'E/S TOR et analogiques, par exemple pour le module 0 :</li>
+<li>%QW0.0 -&gt; mot de 16 bits pour une sortie 'analogique'</li>
+<li>%QW0.1 -&gt; 16 bits utilisables pour 16 sorties TOR</li>
+<li>%IW0.0  -&gt; 16 bits utilisables pour 16 entrées TOR</li>
+</ul>
 <p>L'exemple ci-dessous utilise <strong>EcoStruxure Basic Expert de SchneiderElectric</strong> qui permet la programmation et la simulation des automates de la famille M221.</p>
 <h2 id="exemple-ascenseur">Exemple ascenseur</h2>
 <p>(fichiers 15-demo_ascenseur_M221.xrs et 15-demo_ascenseur_M221.smbp)</p>
