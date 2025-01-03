@@ -63,7 +63,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -641,6 +641,9 @@
 </li>
 </ul>
 <h2 id="mappage-modbus">Mappage MODBUS</h2>
+<p>Exemple de mappage lorsque :
+-  <strong>adresse_table_echange</strong> = 400
+-  <strong>adresse_QW</strong> = 400 et <strong>adresse_IW</strong> = 400</p>
 <p><img alt="" src="../media/mappage_modbus.png" /></p>
 <h2 id="configuration-modbus">Configuration MODBUS</h2>
 <p><img alt="" src="../media/modbus_config.png" /></p>
@@ -671,13 +674,26 @@
 <tr>
 <td>adresse_table_echange</td>
 <td>400</td>
-<td>pointeur sur la table d'échange</td>
+<td>pointeur sur la table d'échange <strong>(déprécié)</strong></td>
+</tr>
+<tr>
+<td>adresse_QW</td>
+<td>400</td>
+<td>pointeur sur la table des sorties API</td>
+</tr>
+<tr>
+<td>adresse_IW</td>
+<td>500</td>
+<td>pointeur sur la table des entrées API</td>
 </tr>
 </tbody>
 </table>
 <ul>
+<li><strong>adresse_table_echange</strong> fixe l'adresse de la table de sorties API <strong>et</strong> l'adresse de la table des entrées API. L'écart entre ces deux adresses est de <strong>100</strong>.</li>
+<li><strong>adresse_QW</strong> et <strong>adresse_W</strong> permettent de fixer les pointeurs de table plus librement. Il faut néanmoins que l'écart entre ces deux pointeurs soit au moins de 24 mots (16 bits) pour éviter le chevauchement des tables.</li>
+<li><strong>24</strong> correspond aux nombres de registres de retenue (holding registers) utilisés dans les requêtes Modbus (24 mots pour les entrées et 24 mots pour les sorties).</li>
 <li>
-<p>Si l'objet de configuration MODBUS n'est pas placé dans votre projet, les valeurs utilisées par défaut sont : adresse_ip = local_host, port = 502, adresse_table_echange = 400 et ID_unite = 111.</p>
+<p>Si l'objet de configuration MODBUS n'est pas placé dans votre projet, les valeurs utilisées par défaut sont : adresse_ip = local_host, port = 502, adresse_table_echange = 400 (qui correspond à adresse_QW = 400 et adresse_IW = 500) et ID_unite = 111.</p>
 </li>
 <li>
 <p>L'objet de configuration MODBUS est requis  uniquement lorsqu'un automate programmable est présent dans un folio.</p>
